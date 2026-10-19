@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --primary-Orange-500: hsl(25, 97%, 53%);
+  --neutral-White: hsl(0, 100%, 100%);
+  --neutral-Grey-500: hsl(217, 12%, 63%);
+  --neutral-Grey-900: hsl(213, 19%, 18%);
+  --neutral-Grey-950: hsl(216, 12%, 8%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+}
+.container{
+  background-color: var(--neutral-Grey-950);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.component-container{
+  background-color: var(--neutral-Grey-900);
+  width: 400px;
+  height: 350px;
+  border-radius: 20px;
+  padding: 25px;
+}
+.logo{
+  background-color: hsl(214, 17%, 24%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+h2{
+  color: var(--neutral-White);
+  margin-bottom: 10px;
+}
+p{
+  color: var(--neutral-Grey-500);
+  width: 100%;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+.rank-btn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.rank-btn button{
+  background-color: hsl(214, 17%, 24%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  color: var(--neutral-Grey-500);
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 1.1em;
+}
+.rank-btn button:hover{
+  background-color: var(--neutral-White);
+  color: var(--neutral-Grey-950);
+}
+.rank-btn button.active{
+  background-color: var(--primary-Orange-500);
+  color: var(--neutral-Grey-950);
+}
+.submit-btn{
+  width: 95%;
+  height: 35px;
+  background-color: var(--primary-Orange-500);
+  border: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--neutral-Grey-950);
+  cursor: pointer;
+}
+.submit-btn:hover{
+  background-color: var(--neutral-White);
+}
+.thank-you {
+  background-color: var(--neutral-Grey-900);
+  width: 400px;
+  height: 350px;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+.thankYou {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.thankYou .logoo {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ centers img + p inside */
+}
+
+.thankYou .logoo img {
+  margin-bottom: 15px;
+  width: 120px;
+}
+
+.thankYou .logoo p {
+  color: var(--primary-Orange-500);
+  background-color: hsl(214, 17%, 24%);
+  width: fit-content; /* ✅ no more weird margin-left */
+  min-width: 200px;   /* ✅ keeps a nice pill size */
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  padding: 5px 15px;
+}
+.thankYou .logoo p span {
+  padding: 2px;
+}
+
+.thankYou p {
+  font-size: .97em;
+  text-align: center;
+}
+
+@media(max-width: 375px){
+    .component-container,
+  .thank-you {
+    width: 90%;       /* shrink width */
+    max-width: 300px; /* don’t let it grow too wide */
+    height: auto;     /* content controls height */
+    margin: 0 15px;   /* ✅ adds left & right margins */
+  }
+  .rank-btn button {
+    width: 45px;
+    height: 45px;
+    margin-right: 15px; /* ✅ buttons closer together */
+  }
+
+  .submit-btn {
+    width: 100%;  /* ✅ full width on small screens */
+  }
+}
